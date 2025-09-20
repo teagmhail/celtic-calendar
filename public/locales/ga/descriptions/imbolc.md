@@ -1,0 +1,1 @@
+Imbolc, traditionally celebrated on February 1st, marks the beginning of spring in the Celtic calendar. It was a time to welcome the lengthening days and the first signs of growth after winter’s darkness. Imbolc was closely linked with Brigid, the ancient goddess of fertility, poetry, and healing.

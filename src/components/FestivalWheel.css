@@ -1,0 +1,167 @@
+:root {
+    --festival-radius: 10;
+    --today-radius: 6;
+    --fire-event-color: #8B0000;
+    --solar-event-color: #ff9900;
+    --today-color: #0077ff;
+
+    /* Width of the fixed wheel panel on desktop */
+    --wheel-panel-w: 270px;
+
+    /* Gutter between panel and wheel area */
+    --wheel-panel-gap: 16px;
+
+    --header-h: 150px;
+}
+
+.event-marker {
+    pointer-events: all;
+    cursor: pointer;
+
+    &:hover {
+        transition: transform 0.2s;
+        transform: scale(1.25);
+        transform-box: fill-box;
+        transform-origin: center;
+    }
+
+    &.today {
+        fill: var(--today-color);
+        r: var(--today-radius);
+        cursor: default;
+    }
+
+    &.fire {
+        fill: var(--fire-event-color);
+        r: var(--festival-radius);
+    }
+
+    &.solar {
+        fill: var(--solar-event-color);
+        r: var(--festival-radius);
+    }
+
+    &:focus-visible {
+        outline: none;
+        stroke: #1a1a1a;
+        stroke-width: 2.5;
+    }
+}
+
+/* moon phases */
+.new-moon,
+.half-moon-dark {
+    fill: #232323;
+}
+
+.full-moon,
+.half-moon-light {
+    fill: #eee092;
+}
+
+svg text {
+    /*pointer-events: none;*/
+    text-anchor: middle;
+    dominant-baseline: middle;
+    font-size: .75em;
+    fill: var(--text-color);
+}
+
+.tick {
+    stroke: #999;
+    stroke-width: 1;
+    opacity: 0.6;
+}
+
+/* === wheel control panel === */
+/* Fixed panels */
+.wheel-controls,
+.description-panel {
+    border: var(--panel-border);
+    background: var(--panel-color);
+    border-radius: 12px;
+    padding: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
+    color: var(--text-color);
+
+    position: fixed;
+    top: max(40%, calc(var(--header-h) + var(--wheel-panel-gap)));
+
+    width: var(--wheel-panel-w);
+    z-index: 30;
+    min-height: 200px;
+}
+
+.wheel-controls {
+    left: var(--wheel-panel-gap);
+}
+
+.description-panel {
+    right: var(--wheel-panel-gap);
+}
+
+/* one-row, equal segments */
+.segmented-season,
+.segmented-year,
+.segmented-moon {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    /* tighten labels so three fit comfortably */
+    label {
+        white-space: nowrap;
+        padding: 0.35rem 0.7rem;
+        /* a bit narrower than default */
+    }
+}
+
+/* Wheel centered; no padding-left! */
+.wheel-stage {
+    display: flex;
+    justify-content: center;
+}
+
+.wheel-canvas {
+    position: relative;
+    display: inline-block;
+    /* shrink-wrap to SVG */
+}
+
+.wheel-controls-section {
+    margin-bottom: 0.5rem;
+}
+
+.wheel-controls-title,
+.description-panel-title {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 12px;
+    margin-bottom: 0.35rem;
+}
+
+.floating-panel-label {
+    font-weight: 700;
+}
+
+.floating-panel-empty {
+    margin-top: 0.3rem;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* Responsive: on narrow screens, stack the panel above the wheel */
+@media (max-width: 1000px) {
+
+    .wheel-controls,
+    .description-panel {
+        position: static;
+        transform: none;
+        width: auto;
+        margin: 0 0 12px 0;
+        min-height: auto;
+    }
+
+    .wheel-stage {
+        justify-content: center;
+    }
+}

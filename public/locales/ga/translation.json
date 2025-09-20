@@ -1,0 +1,124 @@
+{
+    "title": "Féilire Ceilteach",
+    "todays-festival": "🎉 Inniu is é {{festivalName}}",
+    "next-festival": "Is é an chéad fhéile eile {{festivalName}} i {{daysRemaining}} lá",
+    "table-columns": {
+        "date": "Dáta",
+        "festival": "Féile",
+        "description": "Cur síos"
+    },
+    "festival-wheel": {
+        "today": "Inniu",
+        "controls": {
+            "name": "Rialuithe Roth",
+            "year-start": {
+                "name": "Tús na bliana",
+                "samhain": "samhain",
+                "imbolc": "imbolc",
+                "jan-1": "1 ean"
+            },
+            "seasons": {
+                "name": "Séasúir",
+                "celtic": "ceilteach",
+                "astronomical": "réalt",
+                "meteorological": "meitéo"
+            },
+            "lunar-phases": {
+                "name": "Céimeanna na gealaí",
+                "none": "níl",
+                "simple": "simplí",
+                "emoji": "emoji"
+            }
+        },
+        "lunar-phases": {
+            "new": "Gealach Nua",
+            "first-quarter": "Céad Cheathrú",
+            "full": "Gealach Lán",
+            "last-quarter": "Ceathrú Deiridh"
+        }
+    },
+    "controls": {
+        "year": "Bliain",
+        "language": "Teanga",
+        "generate-ics": "Giniúint .ics",
+        "festivals": "Féilte",
+        "fire": "tine",
+        "solar": "gréine",
+        "other": "eile",
+        "view": "Radharc",
+        "table": "tábla",
+        "wheel": "roth",
+        "info": "Maidir le"
+    },
+    "about": {
+        "title": "Maidir leis an bhféilire Ceilteach",
+        "description": "Is aip í seo chun féilte Ceilteacha a iniúchadh, traidisiúin a fhoghlaim, agus comhaid .ics a chruthú gur féidir a iompórtáil i bhfeidhmchláir féilire.",
+        "credits-list": [
+            "Foinsí: “The Year in Ireland” le Kevin Danaher agus foinsí eile",
+            "Teicneolaíocht: TypeScript, React",
+            "Clónna: EB Garamond ⁊ Merriweather"
+        ],
+        "credits": "Creidmheasanna",
+        "release-notes": "Nótaí Eisiúna",
+        "changelog": [
+            {
+                "version": "v1.0.0",
+                "description": "An chéad eisiúint"
+            }
+        ]
+    },
+    "festivals": {
+        "imbolc": {
+            "name": "Imbolc",
+            "shortDescription": "Tús an earraigh. Baineann sé le Bríd, bandia na torthúlachta, an leighis agus na filíochta."
+        },
+        "beltane": {
+            "name": "Bealtaine",
+            "shortDescription": "Tús an tsamhraidh. Féile tine le haghaidh torthúlachta agus cosanta. Tinte cnámh agus deasghnátha le haghaidh athnuachana agus aontais."
+        },
+        "lughnasadh": {
+            "name": "Lughnasadh",
+            "shortDescription": "Tús an fhómhair. Ceiliúradh ar Lugh, dia na scileanna. Go traidisiúnta, cluichí, féastaí, agus aontaí."
+        },
+        "samhain": {
+            "name": "Samhain",
+            "shortDescription": "Tús na Bliana Ceiltí agus tús an gheimhridh. Tá an veil idir na domhan is tanaí — am do na sinsir."
+        },
+        "spring-equinox": {
+            "name": "Cónocht an Earraigh",
+            "shortDescription": "Tá an lá agus an oíche cothrom. Am múscailte, cothromaíochta, agus curtha."
+        },
+        "summer-solstice": {
+            "name": "Grianstad an tSamhraidh",
+            "shortDescription": "An lá is faide sa bhliain. Ceiliúradh ar rath, solas, agus saol."
+        },
+        "autumn-equinox": {
+            "name": "Cónocht an Fhómhair",
+            "shortDescription": "Tá an lá agus an oíche cothrom arís. Am fómhair, cothromaíochta, agus ullmhúcháin don gheimhreadh."
+        },
+        "winter-solstice": {
+            "name": "Grianstad an Gheimhridh",
+            "shortDescription": "An oíche is faide, nuair a ghéilleann an dorchadas agus go saolaítear an ghrian arís.",
+            "longDescription": "Léiríonn Grianstad an Gheimhridh casadh na bliana, nuair is doimhne an dorchadas agus nuair a thosaíonn an solas ag filleadh. Is am dóchais agus athnuachana é, ag tabhairt ómóis do athbhreith na gréine agus do ghealltanas laethanta níos faide. I measc na nósanna tá coinnle, tinte, féastaí agus teacht le chéile chun solas na gréine a chur fáilte roimhe arís."
+        },
+        "st-brigids-day": {
+            "name": "Lá Fhéile Bríde",
+            "shortDescription": "",
+            "longDescription": ""
+        }
+    },
+    "months": {
+        "january": "eanáir",
+        "february": "feabhra",
+        "march": "márta",
+        "april": "aibreán",
+        "may": "bealtaine",
+        "june": "meitheamh",
+        "july": "iúil",
+        "august": "lúnasa",
+        "september": "meán fómhair",
+        "october": "deireadh fómhair",
+        "november": "samhain",
+        "december": "nollaig"
+    }
+}

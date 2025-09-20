@@ -1,0 +1,131 @@
+{
+    "title": "Celtic Calendar",
+    "todays-festival": "🎉 Today is {{festivalName}}",
+    "next-festival": "Next festival is {{festivalName}} in {{daysRemaining}} days",
+    "table-columns": {
+        "date": "Date",
+        "festival": "Festival",
+        "description": "Description"
+    },
+    "festival-wheel": {
+        "today": "Today",
+        "controls": {
+            "name": "Wheel controls",
+            "year-start": {
+                "name": "Start of the year",
+                "samhain": "samhain",
+                "imbolc": "imbolc",
+                "jan-1": "1 jan"
+            },
+            "seasons": {
+                "name": "Seasons",
+                "celtic": "celtic",
+                "astronomical": "solar",
+                "meteorological": "meteo"
+            },
+            "lunar-phases": {
+                "name": "Lunar phases",
+                "none": "none",
+                "simple": "simple",
+                "emoji": "emoji"
+            }
+        },
+        "lunar-phases": {
+            "new": "New Moon",
+            "first-quarter": "First Quarter",
+            "full": "Full Moon",
+            "last-quarter": "Last Quarter"
+        }
+    },
+    "controls": {
+        "year": "Year",
+        "language": "Language",
+        "generate-ics": "Generate .ics",
+        "festivals": "Festivals",
+        "fire": "fire",
+        "solar": "solar",
+        "other": "other",
+        "view": "View",
+        "table": "table",
+        "wheel": "wheel",
+        "info": "about"
+    },
+    "about": {
+        "title": "About the Celtic Calendar",
+        "description": "This app allows you to explore Celtic festivals, learn their traditions, and generate .ics files for import into your calendar.",
+        "credits": "Credits",
+        "credits-list": [
+            "Sources: “The Year in Ireland” by Kevin Danaher + other references",
+            "Tech: TypeScript, React",
+            "Fonts: EB Garamond & Merriweather"
+        ],
+        "release-notes": "Release Notes",
+        "changelog": [
+            {
+                "version": "v1.0.0",
+                "description": "Initial release"
+            }
+        ]
+    },
+    "festivals": {
+        "imbolc": {
+            "name": "Imbolc",
+            "shortDescription": "Marks the beginning of spring. Associated with Bríd (Brigid), goddess of fertility, healing, and poetry.",
+            "longDescription": "Imbolc is celebrated on February 1st, marking the halfway point between winter and spring. It is a time of purification and renewal, often associated with the goddess Bríd, who represents fertility, healing, and inspiration. Traditional customs include lighting candles to symbolize the returning light and preparing for the new growth of spring."
+        },
+        "beltane": {
+            "name": "Bealtaine",
+            "shortDescription": "Summer begins. Fire festival of fertility and protection. Bonfires and rituals for renewal and union.",
+            "longDescription": "Bealtaine is celebrated on May 1st and marks the beginning of summer. It is a fire festival that symbolizes fertility and protection. Traditional customs include lighting bonfires, jumping over flames, and various rituals to ensure a bountiful harvest and the protection of livestock."
+        },
+        "lughnasadh": {
+            "name": "Lughnasadh",
+            "shortDescription": "Start of the harvest. Celebrates Lugh, god of skill. Traditionally includes games, feasting, and fairs.",
+            "longDescription": "Lughnasadh is celebrated on August 1st and marks the beginning of the harvest season. It is dedicated to Lugh, the god of skill and craftsmanship. Traditional customs include games, feasting, and fairs, where communities come together to celebrate the fruits of their labor and honor the skills of their artisans."
+        },
+        "samhain": {
+            "name": "Samhain",
+            "shortDescription": "Marks the Celtic New Year and the beginning of winter. The veil between worlds is thinnest — a time for ancestors.",
+            "longDescription": "Samhain is celebrated on October 31st and marks the end of the harvest season and the beginning of winter. It is a time when the veil between the living and the dead is thinnest, allowing for communication with ancestors. Traditional customs include lighting bonfires, feasting, and honoring the deceased."
+        },
+        "spring-equinox": {
+            "name": "Spring Equinox\n(Cónocht an Earraigh)",
+            "shortDescription": "Day and night are balanced. A time of awakening, balance, and planting.",
+            "longDescription": "The Spring Equinox, known as Lá le Gréine in Irish, is celebrated around March 20th. It marks the point in spring when day and night are of equal length. This time is associated with renewal, growth, and balance. Traditional customs include planting seeds and celebrating the returning light."
+        },
+        "summer-solstice": {
+            "name": "Summer Solstice\n(Grianstad an tSamhraidh)",
+            "shortDescription": "Longest day of the year. Celebration of abundance, light, and life.",
+            "longDescription": "The Summer Solstice, known as Grianstad an tSamhraidh in Irish, is celebrated around June 21st. It marks the longest day of the year and the peak of summer. This time is associated with abundance, light, and life. Traditional customs include feasting, dancing, and celebrating the sun's power."
+        },
+        "autumn-equinox": {
+            "name": "Autumn Equinox\n(Cónocht an Fhómhair)",
+            "shortDescription": "Day and night are equal again. A time of harvest, balance, and preparation for winter.",
+            "longDescription": "The Autumn Equinox, known as Cónocht an Fhómhair in Irish, is celebrated around September 22nd. It marks the point in autumn when day and night are of equal length. This time is associated with the harvest, balance, and preparation for the coming winter. Traditional customs include gathering the harvest and giving thanks for the bounty of the earth."
+        },
+        "winter-solstice": {
+            "name": "Winter Solstice\n(Grianstad an Gheimhridh)",
+            "shortDescription": "The longest night, when darkness yields and the sun is reborn.",
+            "longDescription": "The Winter Solstice marks the turning point of the year, when darkness is deepest and the light begins to return. It is a time of hope and renewal, honouring the rebirth of the sun and the promise of longer days. Traditions include candles, fires, feasting, and gathering to welcome the returning light."
+        },
+        "st-brigids-day": {
+            "name": "St. Brigid’s Day",
+            "shortDescription": "",
+            "longDescription": ""
+        }
+    },
+    "months": {
+        "january": "january",
+        "february": "february",
+        "march": "march",
+        "april": "april",
+        "may": "may",
+        "june": "june",
+        "july": "july",
+        "august": "august",
+        "september": "september",
+        "october": "october",
+        "november": "november",
+        "december": "december"
+    }
+}

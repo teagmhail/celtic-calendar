@@ -1,0 +1,93 @@
+/* Remove root padding effect at small widths */
+@media (max-width: 600px) {
+    .festival-table-wrapper {
+        margin-left: -2rem;
+        margin-right: -2rem;
+    }
+
+    thead th,
+    tbody td {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #fffdf8;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    thead {
+        th {
+            font-size: 1.3rem;
+            background-color: #f1ecda;
+            padding: 0.75rem;
+            text-align: center;
+        }
+    }
+
+    th:first-child,
+    td:first-child {
+        min-width: 3em;
+    }
+
+    th:nth-child(2),
+    td:nth-child(2) {
+        width: 18%;
+    }
+
+    th:nth-child(3),
+    td:nth-child(3) {
+        /* Keeps content in one line */
+        white-space: nowrap;
+    }
+
+    tbody {
+        tr {
+            cursor: pointer;
+
+            &:hover {
+                /* Highlight row on hover */
+                background-color: #f2f2f2;
+                cursor: pointer;
+                transition: background-color 0.2s;
+                transform: scale(1.02);
+            }
+
+            &:focus {
+                /* For keyboard navigation */
+                background-color: #f2f2f2;
+            }
+
+            td {
+                padding: 0.25rem;
+                border-bottom: 1px solid #eee;
+                vertical-align: top;
+                font-family: 'Merriweather', serif;
+
+                /* Category emoji cell */
+                &:first-child {
+                    text-align: center;
+                    font-size: 1.2rem;
+                    width: 2rem;
+                }
+            }
+
+            &.fire-row {
+                background-color: #fff2e6;
+            }
+
+            &.solar-row {
+                background-color: #fffbe6;
+            }
+
+            &.christian-row {
+                background-color: #e6ecff;
+            }
+        }
+    }
+}

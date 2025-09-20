@@ -1,0 +1,37 @@
+:root {
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --text-color: #3a2e1f;
+  --background-color: #f7f4ed;
+  --panel-color: #fdf6e3;
+  --panel-border: 1px solid #b7a88756;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'EB Garamond', serif;
+  color: var(--text-color);
+  margin-block-start: 0;
+}

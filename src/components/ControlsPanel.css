@@ -1,0 +1,366 @@
+.controls-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    left: 0;
+    right: 0;
+    width: auto;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0.5rem;
+    gap: 2rem;
+
+    background-color: var(--panel-color);
+    border-bottom: var(--panel-border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    color: var(--text-color);
+}
+
+.controls-panel {
+    position: static;
+    font-size: 1.2rem;
+    text-align: left;
+    line-height: 2rem;
+}
+
+.controls-header {
+    flex: 1;
+
+    h1 {
+        font-family: 'EB Garamond', serif;
+        font-size: 5em;
+        line-height: 1.1;
+        margin: 0;
+        color: var(--text-color);
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-block: 0rem;
+    }
+}
+
+/* Each row is a 2‑column grid: label | field  */
+.controls-dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    column-gap: .1rem;
+    row-gap: 0rem;
+    align-items: center;
+    margin: 0;
+    /* remove default DL margins */
+}
+
+.controls-dl {
+    dt {
+        margin: 0;
+        justify-self: end;
+        white-space: nowrap;
+        font-weight: 500;
+
+    }
+
+    dd {
+        margin: 0;
+    }
+
+    .field-inline {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .1rem .1rem;
+
+        label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0rem;
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .controls-dl {
+        grid-template-columns: 1fr;
+    }
+
+    .controls-dl dt {
+        justify-self: start;
+    }
+
+    /* Tighter title size on very small screens */
+    .controls-header h1 {
+        font-size: 3em;
+    }
+}
+
+/* Stack header above controls on narrow screens */
+@media (max-width: 980px) {
+    .controls-wrapper {
+        position: relative;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0.75rem;
+    }
+
+    .controls-header {
+        order: 0;
+        text-align: center;
+    }
+
+    .controls-panel {
+        order: 1;
+    }
+}
+
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: .5em .5em;
+    font-size: 1em;
+    font-family: inherit;
+    background-color: var(--text-color);
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+
+    &:focus,
+    &:focus-visible {
+        transform: scale(1);
+    }
+}
+
+/* Segmented control for the visualization toggle */
+.segmented {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid #b7a887;
+    background: #f6f1df;
+    border-radius: 9999px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .6);
+
+    /* Hide radios visually but keep them accessible */
+    input[type="radio"],
+    input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+
+        /* Selected state */
+        &:checked+label {
+            background: var(--text-color);
+            color: var(--background-color);
+        }
+
+        /* Keyboard focus */
+        &:focus-visible+label {
+            outline: 2px solid var(--text-color);
+            /* warm accent */
+            outline-offset: 2px;
+        }
+    }
+
+    /* Segment labels */
+    label {
+        padding: .1rem .3rem;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+        font-weight: 500;
+        line-height: 1.2;
+        transition: background .15s ease, color .15s ease, transform .05s ease;
+
+        /* Hover nudge */
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+}
+
+.segmented-lang {
+    grid-template-columns: repeat(3, 1fr);
+
+    label {
+        padding-top: 0;
+    }
+}
+
+/* === Multi (checkbox) variant === */
+.segmented-multi {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 0;
+
+    /* Light separators between pills */
+    label+input+label {
+        /* every label that follows an input+label pair gets a separator */
+        box-shadow: -1px 0 0 rgba(0, 0, 0, 0.08) inset;
+    }
+
+    label {
+
+        .is-disabled,
+        &[aria-disabled="true"] {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        &[data-locked="true"] {
+            position: relative;
+
+            &::after {
+                content: "🔒";
+                font-size: 0.9em;
+                margin-left: .35rem;
+                opacity: .9;
+            }
+        }
+
+        &:first-of-type {
+            border-top-left-radius: 9999px;
+            border-bottom-left-radius: 9999px;
+        }
+
+        &:last-of-type {
+            border-top-right-radius: 9999px;
+            border-bottom-right-radius: 9999px;
+        }
+    }
+}
+
+/* "soon" tooltip */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* === year === */
+/* Segmented-like wrapper for the year input + arrows */
+.year-stepper {
+    display: inline-flex;
+    align-items: stretch;
+    border: 1px solid #b7a887;
+    background: #f6f1df;
+    border-radius: 9999px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .6);
+}
+
+/* Arrow buttons */
+.year-btn {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    padding: 0.1rem 0.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text-color);
+    cursor: pointer;
+    user-select: none;
+    transition: background .15s ease, color .15s ease, transform .05s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:active {
+        background: var(--text-color);
+        color: var(--background-color);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--text-color);
+        outline-offset: 2px;
+    }
+}
+
+/* The input itself styled like the middle pill */
+.year-input {
+    font-size: inherit;
+    font-family: inherit;
+    width: 3rem;
+    text-align: center;
+    border: 0;
+    background: transparent;
+    font-weight: 600;
+    color: var(--text-color);
+    padding: 0.1rem 0.1rem;
+    outline: none;
+    /* no inner shadow on focus */
+
+    /* remove native number spinners */
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        appearance: none;
+        margin: 0;
+    }
+
+    &[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+}
+
+/* Keep consistent gap with other controls in dd */
+.controls-dl dd .year-stepper {
+    margin-top: 2px;
+}
+
+/* === About === */
+/* Round "?" info button in the header (top-right area) */
+.info-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    appearance: none;
+
+    border: 1px solid #b7a887;
+    border-radius: 50%;
+
+    background: transparent;
+    color: var(--text-color);
+    width: 2rem;
+    height: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: .7em;
+    padding-left: .6em;
+
+    cursor: pointer;
+    transition: background .15s ease, color .15s ease, transform .05s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:active {
+        background: var(--text-color);
+        color: var(--background-color);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--text-color);
+        outline-offset: 2px;
+    }
+}
+
+.about-title {
+    margin-block-end: 0;
+}

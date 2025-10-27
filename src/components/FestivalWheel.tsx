@@ -108,7 +108,7 @@ export function FestivalWheel({ year, includeFireFestivals, includeSolarFestival
     const [seasonScheme, setSeasonScheme] = useState<SeasonScheme>(seasonSchemeNames.celtic); //default to Celtic
     type SeasonArc = { from: number; to: number; name: string; color: string; };
     const [yearStart, setYearStart] = useState<YearStart>(yearStartOptions.samhain); //default to Samhain
-    const [moonView, setMoonView] = useState<MoonView>(moonViewOptions.none); //default to none
+    const [moonView, setMoonView] = useState<MoonView>(moonViewOptions.simple); //default to simple
 
     const ring1Id = `month-ring-1`; const ring2Id = `month-ring-2`;
     const monthRadiusL1 = radius - 30; const monthRadiusL2 = radius - 42;

@@ -64,6 +64,10 @@
             {
                 "version": "v1.0.0",
                 "description": "Initial release"
+            },
+            {
+                "version": "v1.0.1",
+                "description": "Minor fixes"
             }
         ]
     },

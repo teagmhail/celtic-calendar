@@ -64,6 +64,10 @@
             {
                 "version": "v1.0.0",
                 "description": "An chéad eisiúint"
+            },
+            {
+                "version": "v1.0.1",
+                "description": "Ceartúcháin bheaga"
             }
         ]
     },

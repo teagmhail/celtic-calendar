@@ -15,7 +15,7 @@ export function generateICS(
     const toIcsEvent = (key: string, startDate: Date) => ({
         start: { date: startDate },
         end: { date: new Date(startDate.getTime() + DAY_MS) },
-        summary: t(`festivals.${key}.summary`),
+        summary: t(`festivals.${key}.name`),
         uid: `${key}-${year}@celtic-calendar`,
         stamp: { date: new Date() },
     });
